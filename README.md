@@ -1,4 +1,4 @@
-# POLICE ESCAPE v 1.0
+# [POLICE ESCAPE v 1.0](https://artusindus.github.io/Police-Escape/)
 
 ## Game Instructions
 
