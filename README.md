@@ -1,4 +1,4 @@
-# [POLICE ESCAPE v 1.0](https://artusindus.github.io/Police-Escape/)
+# [POLICE ESCAPE v 1.1](https://artusindus.github.io/Police-Escape/)
 
 ## Game Instructions
 
@@ -6,7 +6,7 @@
 
 Escape from the police for as long as possible!
 
-Drive through endless traffic, avoid other vehicles, and keep the police from catching you. The longer you survive, the higher your score and earnings will be.
+Drive through endless traffic, avoid other vehicles, collect coins, and keep the police from catching you. The longer you survive, the higher your score and earnings will be.
 
 ### CONTROLS
 
@@ -14,11 +14,25 @@ Drive through endless traffic, avoid other vehicles, and keep the police from ca
 
 * **A / Left Arrow** — Steer left
 * **D / Right Arrow** — Steer right
+* **Space** — Activate Nitro
 * **ESC** — Pause / Resume
 
 **Mobile**
 
 * Use the **left and right buttons** on the screen to steer your car.
+* Use the **Nitro button** to activate Nitro.
+
+### NITRO
+
+Nitro gives your car a temporary speed boost.
+
+Your Nitro bar is displayed during the game.
+
+Nitro is consumed while the boost is active and regenerates over time.
+
+Collecting coins also restores Nitro.
+
+Use Nitro strategically to escape the police or quickly get through dangerous traffic.
 
 ### POLICE
 
@@ -40,9 +54,23 @@ You start every game with **3 lives**.
 
 When you lose all your lives, the game is over.
 
+### COINS
+
+Blue coins appear on the road during the game.
+
+Collecting a coin:
+
+* Gives you **$5**
+* Increases your score
+* Restores some Nitro
+
+Collect as many coins as possible while avoiding traffic and the police.
+
 ### SCORE
 
 Your score increases automatically while you drive.
+
+Collecting coins and surviving longer increases your score.
 
 The longer you survive, the higher your score becomes.
 
@@ -50,7 +78,9 @@ Try to beat your personal high score!
 
 ### MONEY
 
-You earn money based on the distance you drive.
+You earn money while playing.
+
+Money can be earned by driving and collecting coins.
 
 Use your money to unlock new cars and roads.
 
@@ -105,6 +135,7 @@ After Game Over, you can see:
 * Your final score
 * The distance you drove
 * The money you earned
+* Your high score
 
 Then you can either play again or return to the main menu.
 
@@ -112,7 +143,7 @@ Then you can either play again or return to the main menu.
 
 How long can you escape?
 
-**Drive. Dodge. Survive. Escape.**
+**Drive. Dodge. Collect. Boost. Survive. Escape.**
 
 ### POLICE ESCAPE
 
