@@ -8,10 +8,11 @@ body {
   margin: 0;
   width: 100%;
   height: 100%;
+  min-height: 100%;
   overflow: hidden;
   background: #08111d;
   color: #fff;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Courier New", monospace;
 }
 
 button {
@@ -19,30 +20,55 @@ button {
   width: min(360px, 88vw);
   margin: 12px auto;
   padding: 15px 20px;
+
   border: 0;
   border-radius: 12px;
+
   color: #fff;
-  background: linear-gradient(135deg, #e63946, #a91428);
-  box-shadow: 0 5px 0 #650d1b, 0 8px 25px #0008;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e63946,
+      #a91428
+    );
+
+  box-shadow:
+    0 5px 0 #650d1b,
+    0 8px 25px #0008;
+
+  font-family: "Courier New", monospace;
   font-weight: 900;
   font-size: 1rem;
   letter-spacing: 1px;
+
   cursor: pointer;
   touch-action: manipulation;
 }
 
 button:active {
   transform: translateY(3px);
-  box-shadow: 0 2px 0 #650d1b;
+
+  box-shadow:
+    0 2px 0 #650d1b;
 }
+
+
+/* =========================================
+   SCREENS
+   ========================================= */
 
 .screen {
   display: none;
+
   width: 100%;
   height: 100%;
   min-height: 100dvh;
+
   overflow: auto;
+
   text-align: center;
+
   padding: 25px 15px;
 }
 
@@ -50,136 +76,329 @@ button:active {
   display: block;
 }
 
+
+/* =========================================
+   MENU / SHOPS
+   ========================================= */
+
 #menu,
 #cars,
 #roads,
 #gameover {
+
   background:
-    radial-gradient(circle at 50% 0, #263d5d, transparent 50%),
-    linear-gradient(145deg, #08111d, #101e31);
+    radial-gradient(
+      circle at 50% 0,
+      #263d5d,
+      transparent 50%
+    ),
+    linear-gradient(
+      145deg,
+      #08111d,
+      #101e31
+    );
 }
 
 #menu {
-  padding-top: clamp(50px, 14vh, 150px);
+  padding-top:
+    clamp(
+      45px,
+      10vh,
+      130px
+    );
 }
 
 .logo {
-  font-size: clamp(3rem, 12vw, 7rem);
+  font-size:
+    clamp(
+      3rem,
+      12vw,
+      7rem
+    );
+
   line-height: .8;
+
   font-weight: 1000;
   font-style: italic;
+
   letter-spacing: -4px;
-  text-shadow: 5px 5px 0 #e63946, 10px 10px 20px #000;
+
+  text-shadow:
+    5px 5px 0 #e63946,
+    10px 10px 20px #000;
 }
 
 .logo span {
   color: #e63946;
-  text-shadow: 5px 5px 0 #fff;
+
+  text-shadow:
+    5px 5px 0 #fff;
 }
 
 .subtitle {
   color: #9fb2c9;
+
   letter-spacing: 4px;
+
   text-transform: uppercase;
 }
 
 .money {
-  margin: 18px auto 25px;
+  margin: 18px auto 15px;
+
   color: #ffd166;
+
   font-size: 1.2rem;
+
   font-weight: bold;
+}
+
+.highscoreMenu {
+  margin: 0 auto 25px;
+
+  color: #b9c7d8;
+
+  font-size: .9rem;
+}
+
+.highscoreMenu b {
+  color: #ffd166;
 }
 
 h1 {
   margin: 10px 0 25px;
+
   color: #ff5964;
-  font-size: clamp(2rem, 8vw, 4rem);
-  text-shadow: 3px 3px 0 #50131c;
+
+  font-size:
+    clamp(
+      2rem,
+      8vw,
+      4rem
+    );
+
+  text-shadow:
+    3px 3px 0 #50131c;
 }
 
-.roadPreview {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  image-rendering: pixelated;
-  display: block;
+
+/* =========================================
+   SETTINGS
+   ========================================= */
+
+.setting {
+  width: min(360px, 88vw);
+
+  margin:
+    0 auto 20px;
+
+  color: #dce8f5;
+
+  font-weight: bold;
 }
+
+.setting label {
+  display: block;
+
+  margin-bottom: 8px;
+}
+
+.setting select {
+  width: 100%;
+
+  padding: 12px;
+
+  border:
+    1px solid #ffffff44;
+
+  border-radius: 10px;
+
+  color: #fff;
+
+  background: #1b3048;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size: 1rem;
+}
+
+
+/* =========================================
+   CARDS
+   ========================================= */
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(
+        210px,
+        1fr
+      )
+    );
+
   gap: 15px;
-  width: min(900px, 100%);
-  margin: 0 auto 25px;
+
+  width:
+    min(
+      900px,
+      100%
+    );
+
+  margin:
+    0 auto 25px;
 }
 
 .card {
   padding: 18px;
-  border: 1px solid #ffffff22;
+
+  border:
+    1px solid #ffffff22;
+
   border-radius: 15px;
+
   background: #ffffff10;
-  box-shadow: 0 8px 25px rgba(29, 28, 28, 0.63);
+
+  box-shadow:
+    0 8px 25px
+    rgba(
+      29,
+      28,
+      28,
+      .63
+    );
 }
 
 .card h2 {
   margin: 5px 0 10px;
+
   font-size: 1.2rem;
 }
 
 .card p {
   color: #b9c7d8;
+
   line-height: 1.5;
 }
 
 .card button {
   width: 100%;
+
   margin-bottom: 0;
+
   font-size: .85rem;
 }
 
 .card button.secondary {
   background: #29415e;
-  box-shadow: 0 5px 0 #17283c;
+
+  box-shadow:
+    0 5px 0 #17283c;
 }
 
 .preview {
   height: 90px;
+
   display: grid;
+
   place-items: center;
+
   overflow: hidden;
 }
 
+.pixelPreview {
+  width: 80px;
+  height: 80px;
+
+  object-fit: contain;
+
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+.roadPreview {
+  width: 100%;
+  height: 180px;
+
+  object-fit: cover;
+
+  image-rendering: pixelated;
+}
+
+
+/* =========================================
+   GAME
+   ========================================= */
 
 .gameScreen {
   position: fixed;
+
   inset: 0;
+
   width: 100vw;
   height: 100dvh;
+
   min-height: 0;
+
   padding: 0 !important;
+
   overflow: hidden;
+
   background: #172b3d;
 }
 
 #canvas {
   position: absolute;
+
   inset: 0;
+
   display: block;
+
   width: 100vw;
   height: 100dvh;
 }
 
 
+/* =========================================
+   HUD
+   ========================================= */
+
 #hud {
   position: absolute;
-  top: max(12px, env(safe-area-inset-top));
+
+  top:
+    max(
+      12px,
+      env(
+        safe-area-inset-top
+      )
+    );
+
   left: 0;
   right: 0;
+
   display: flex;
-  justify-content: space-around;
+
+  justify-content:
+    space-around;
+
   pointer-events: none;
-  font-size: clamp(.75rem, 2.5vw, 1rem);
-  text-shadow: 2px 2px 3px #000;
+
+  font-size:
+    clamp(
+      .72rem,
+      2.5vw,
+      1rem
+    );
+
+  text-shadow:
+    2px 2px 3px #000;
+
+  z-index: 10;
 }
 
 #hud b {
@@ -188,102 +407,306 @@ h1 {
 
 #lives {
   color: #ff5261;
+
   letter-spacing: 3px;
 }
 
+
+/* =========================================
+   POLICE STATUS
+   ========================================= */
+
 #policeStatus {
   position: absolute;
+
   top: 52px;
+
   left: 50%;
-  transform: translateX(-50%);
+
+  transform:
+    translateX(-50%);
+
   color: #ff6670;
+
   font-size: .75rem;
+
   font-weight: bold;
-  text-shadow: 2px 2px 3px #000;
+
+  text-shadow:
+    2px 2px 3px #000;
+
   pointer-events: none;
+
+  z-index: 10;
+
+  white-space: nowrap;
 }
+
+
+/* =========================================
+   NITRO HUD
+   ========================================= */
+
+#nitroHud {
+  position: absolute;
+
+  left: 50%;
+
+  bottom:
+    max(
+      155px,
+      calc(
+        env(
+          safe-area-inset-bottom
+        ) + 140px
+      )
+    );
+
+  transform:
+    translateX(-50%);
+
+  width:
+    min(
+      260px,
+      52vw
+    );
+
+  z-index: 10;
+
+  pointer-events: none;
+
+  text-shadow:
+    2px 2px 3px #000;
+}
+
+.nitroTitle {
+  display: flex;
+
+  justify-content:
+    space-between;
+
+  margin-bottom: 4px;
+
+  font-size: .7rem;
+
+  font-weight: 900;
+}
+
+#nitroPercent {
+  color: #7dd3fc;
+}
+
+.nitroBar {
+  width: 100%;
+  height: 12px;
+
+  overflow: hidden;
+
+  border:
+    2px solid #ffffff88;
+
+  border-radius: 10px;
+
+  background:
+    #07111dcc;
+
+  box-shadow:
+    0 3px 10px #0008;
+}
+
+#nitroFill {
+  width: 100%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      #38bdf8,
+      #67e8f9,
+      #fff
+    );
+
+  transition:
+    width .08s linear;
+}
+
+
+/* =========================================
+   PAUSE
+   ========================================= */
 
 #pauseBtn {
   position: absolute;
+
   top: 65px;
   right: 12px;
+
   width: 45px;
   height: 42px;
+
   margin: 0;
   padding: 0;
+
   font-size: 1.2rem;
+
   background: #17283ddd;
-  box-shadow: 0 3px 0 #08111d;
+
+  box-shadow:
+    0 3px 0 #08111d;
+
+  z-index: 20;
 }
+
+
+/* =========================================
+   TOUCH CONTROLS
+   ========================================= */
 
 #touchControls {
   position: absolute;
-  z-index: 5;
+
+  z-index: 20;
+
   left: 0;
   right: 0;
-  bottom: max(18px, env(safe-area-inset-bottom));
+
+  bottom:
+    max(
+      18px,
+      env(
+        safe-area-inset-bottom
+      )
+    );
+
   display: flex;
-  justify-content: space-between;
-  padding: 0 18px;
+
+  justify-content:
+    space-between;
+
+  align-items: center;
+
+  padding:
+    0 18px;
+
   pointer-events: none;
 }
 
 #touchControls button {
-  width: clamp(75px, 19vw, 125px);
-  height: clamp(75px, 19vw, 125px);
+  width:
+    clamp(
+      70px,
+      18vw,
+      115px
+    );
+
+  height:
+    clamp(
+      70px,
+      18vw,
+      115px
+    );
+
   margin: 0;
-  padding: 0 0 10px;
-  border: 2px solid #ffffff99;
+  padding: 0;
+
+  border:
+    2px solid #ffffff99;
+
   border-radius: 50%;
+
   color: #fff;
-  background: #10283dcc;
+
+  background:
+    #10283dcc;
+
   box-shadow:
     inset 0 0 20px #ffffff12,
     0 5px 0 #07131f,
     0 0 15px #0008;
-  font-family: Arial, sans-serif;
-  font-size: clamp(3rem, 11vw, 5rem);
+
+  font-size:
+    clamp(
+      2.7rem,
+      10vw,
+      4.5rem
+    );
+
   line-height: 1;
+
   pointer-events: auto;
+
   user-select: none;
+
   touch-action: none;
 }
 
+#touchControls #boostBtn {
+  width:
+    clamp(
+      62px,
+      15vw,
+      90px
+    );
+
+  height:
+    clamp(
+      62px,
+      15vw,
+      90px
+    );
+
+  font-size:
+    clamp(
+      1.7rem,
+      7vw,
+      3rem
+    );
+
+  background:
+    #075985dd;
+
+  box-shadow:
+    inset 0 0 20px #38bdf833,
+    0 5px 0 #082f49,
+    0 0 20px #38bdf855;
+}
+
 #touchControls button:active {
-  background: #e63946dd;
-  transform: scale(.94);
+  background:
+    #e63946dd;
+
+  transform:
+    scale(.94);
 }
 
-.setting {
-  width: min(360px, 88vw);
-  margin: 0 auto 25px;
-  color: #dce8f5;
-  font-weight: bold;
+#touchControls #boostBtn:active {
+  background:
+    #0284c7dd;
 }
 
-.setting label {
-  display: block;
-  margin-bottom: 8px;
-}
 
-.setting select {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ffffff44;
-  border-radius: 10px;
-  color: #fff;
-  background: #1b3048;
-  font-size: 1rem;
-}
+/* =========================================
+   OVERLAY
+   ========================================= */
 
 .overlay {
   position: absolute;
+
   inset: 0;
+
   display: none;
+
   place-items: center;
+
   align-content: center;
-  background: #050a12cc;
-  backdrop-filter: blur(5px);
+
+  background:
+    #050a12cc;
+
+  backdrop-filter:
+    blur(5px);
+
+  z-index: 50;
 }
 
 .overlay.visible {
@@ -294,36 +717,54 @@ h1 {
   margin: 8px auto;
 }
 
-.bigScore {
-  color: #ffd166;
-  font-size: 1.6rem;
-}
+
+/* =========================================
+   GAME OVER
+   ========================================= */
 
 #gameover p {
   font-size: 1.1rem;
+
   color: #d5dfed;
 }
 
-html,
-body,
-#app {
-  width: 100%;
-  height: 100%;
-  min-height: 100%;
-  margin: 0;
-  overflow: hidden;
+.bigScore {
+  color: #ffd166;
+
+  font-size: 1.6rem;
 }
 
-canvas,
+
+/* =========================================
+   EFFECTS
+   ========================================= */
+
+.nitroActive {
+  animation:
+    nitroPulse
+    .12s
+    infinite
+    alternate;
+}
+
+@keyframes nitroPulse {
+  from {
+    filter:
+      drop-shadow(
+        0 0 2px #38bdf8
+      );
+  }
+
+  to {
+    filter:
+      drop-shadow(
+        0 0 12px #67e8f9
+      );
+  }
+}
+
+#canvas,
 img {
-  image-rendering: pixelated;
-  image-rendering: crisp-edges;
-}
-
-.pixelPreview {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
   image-rendering: pixelated;
   image-rendering: crisp-edges;
 }
@@ -333,5 +774,208 @@ button,
 .card,
 #hud,
 #policeStatus {
+  font-family:
+    "Courier New",
+    monospace;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (
+  max-width: 600px
+) {
+
+  #menu {
+    padding-top: 50px;
+  }
+
+  .logo {
+    font-size: 3.8rem;
+  }
+
+  #nitroHud {
+    bottom: 145px;
+  }
+
+}
+
+@media (
+  max-height: 650px
+) {
+
+  #menu {
+    padding-top: 20px;
+  }
+
+  .logo {
+    font-size: 3rem;
+  }
+
+  .setting {
+    margin-bottom: 10px;
+  }
+
+  button {
+    margin: 7px auto;
+    padding: 11px 16px;
+  }
+
+  #nitroHud {
+    bottom: 120px;
+  }
+
+}
+
+/* =========================================================
+   CODE-FENSTER
+   ========================================================= */
+
+#codeOverlay {
+  z-index: 1000;
+
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#codeOverlay.visible {
+  display: flex;
+}
+
+
+.codeBox {
+  width: min(420px, 90vw);
+
+  padding: 25px;
+
+  border: 1px solid #ffffff22;
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #17283c,
+      #0b1522
+    );
+
+  box-shadow:
+    0 20px 60px #000c,
+    inset 0 0 30px #ffffff08;
+
+  box-sizing: border-box;
+
+  text-align: center;
+}
+
+
+.codeBox h1 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+
+.codeBox p {
+  color: #b9c7d8;
+
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  min-height: 22px;
+}
+
+
+#codeInput {
+  display: block;
+
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 15px;
+
+  border: 2px solid #ffffff22;
+  border-radius: 10px;
+
+  outline: none;
+
+  color: #fff;
+
+  background: #08111d;
+
   font-family: "Courier New", monospace;
+  font-size: 1rem;
+  font-weight: bold;
+
+  text-align: center;
+
+  text-transform: uppercase;
+
+  margin-bottom: 12px;
+}
+
+
+#codeInput::placeholder {
+  color: #718096;
+}
+
+
+#codeInput:focus {
+  border-color: #e63946;
+
+  box-shadow:
+    0 0 15px #e6394633;
+}
+
+
+#codeMessage.success {
+  color: #66e38b;
+}
+
+
+#codeMessage.error {
+  color: #ff6670;
+}
+
+
+.codeBox button {
+  width: 100%;
+  margin-top: 8px;
+}
+
+
+.codeBox button.secondary {
+  background: #29415e;
+
+  box-shadow:
+    0 5px 0 #17283c;
+}
+
+
+.codeBox button:disabled {
+  opacity: .6;
+  cursor: wait;
+}
+
+
+/* Kleine Bildschirme */
+
+@media (max-width: 480px) {
+
+  .codeBox {
+    width: 100%;
+    padding: 20px;
+  }
+
+  #codeInput {
+    font-size: .95rem;
+    padding: 14px;
+  }
+
 }
